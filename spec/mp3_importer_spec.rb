@@ -6,7 +6,6 @@ describe "MP3Importer" do
     it 'accepts a file path to parse mp3 files from' do
       test_music_path = "./spec/fixtures/mp3s"
       music_importer = MP3Importer.new(test_music_path)
-
       expect(music_importer.path).to eq(test_music_path)
     end
   end
@@ -30,7 +29,7 @@ describe "MP3Importer" do
     end
   end
 
-  describe '#import' do 
+  describe '#import' do
     it 'imports the files into the library by creating songs from a filename' do
       Artist.class_variable_set("@@all",[])
       test_music_path = "./spec/fixtures/mp3s"
